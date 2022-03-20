@@ -1,13 +1,18 @@
-int score = 80;
+int score = 80;  //Declaring a variable a name of score and with a value of 80
 
-String result;
+String result;   //Declaring a variable String with a name of result
 
-if (score == 80) {
-	result = "You passed!";
-} else if (score > 80) {
-	result = "You did great!";
-} else {
+if (score == 80) {	/*if statement(conditional) created with a boolean expression of 
+				score ==(equal to) 80, */
+	result = "You passed!"; /*the variable (String result) recived a value of pass because 
+					the score was equal to 80*/
+} else if (score > 80) {	/*else if conditional created, 
+					if score is greater than 80, then it will pass*/
+	result = "You did great!"; /*the variable recieves a value of pass because the
+						score was greater or equal to 80*/
+} else {					/*else conditional, score was not equal to or greater than
+						80, boolean expression will result this as false*/
 	result = "You did not pass. Try again!";
-}
+}						//end of if statement
 
-System.out.println(result);
+System.out.println(result);		//prints out the variable's value, print on screen
