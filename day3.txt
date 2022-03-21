@@ -1,24 +1,24 @@
-public class Food {
-	public String name;
-	public String type;
+public class Food {			// a class is created with a public access modifier, class name of "Food"
+	public String name;		// two instance variables are created,
+	public String type;		// both with a "String" class and a name of "name" and "type"	
 
-	public Food(String name, String type) {
-		this.name = name;
+	public Food(String name, String type) {  // a parameter for this class is created
+		this.name = name;				//means the "name" is same as the field variables name
 		this.type = type;
 	}
 
-	public void cook() {
-		if (!name.contains("cooked")) {
-			name = "cooked " + name;
-		}
+	public void cook() {			// the void method has been deployed, means no information will return
+		if (!name.contains("cooked")) { // if statement declared
+			name = "cooked " + name;  //class holds the values of "cooked" + name 
+		}					  //this means that its going to add the string "cooked" with the value "name"
 	}
 }
 
-public class Main {
-	public static void main(String[] args) {
-		Food myFood = new Food("potato", "vegetable");
-		myFood.cook();
+public class Main {						//a new class is created
+	public static void main(String[] args) {			//Main method is created 
+		Food myFood = new Food("potato", "vegetable");	//variable created with name "myFood" a overload constructor is created
+		myFood.cook();						//the variable is looking in the "cook()" method for the value
 
-		System.out.println(myFood.name);
+		System.out.println(myFood.name);			//this method will print out the value on screen
 	}
 }
