@@ -1,12 +1,21 @@
-public class Main {
-	public static void main(String[] args) {
-		Javalin app = Javalin.create();
+public class Main {					//class is created with a name of "Main"
+	public static void main(String[] args) { 	//main method is created
+		Javalin app = Javalin.create();     //declaring vairiable with type javlin and name "app"
+								// value is calling a create method 
 
-		app.start();
+		app.start();				/* the variable is calling method so it can start 
+								to look for HTTP request*/
 
-		app.get("foods", ctx -> {
-			Food myFood = new Food("carrots", "vegetable");
-			ctx.result("You got: " + myFood.name);
+
+
+		app.get("foods", ctx -> {		/* Javalin method is responding to HTTP request
+								 "foods" (path)
+								"ctx" is context (handler)*/
+
+
+			Food myFood = new Food("carrots", "vegetable"); //HTTP request is put into
+			ctx.result("You got: " + myFood.name);		//this package, this is the 
+											//a result the user will see
 		});
 	}
 }

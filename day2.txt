@@ -1,6 +1,7 @@
+//This is a the main method below
 public static void main(String[] args) {
-	String[] foodTypes = getFoodTypes();
-	String myType = foodTypes[2];
+	String[] foodTypes = getFoodTypes(); // the variable has been declared along with an array, the name given is "foodTypes"
+	String myType = foodTypes[2]; // the variable is saying there should be 3 index's for "foodTypes"
 
 	String[] foodsOfMyType = getFoodsByType(myType);
 	
@@ -8,31 +9,31 @@ public static void main(String[] args) {
 		System.out.println(food);
 	}
 }
-
+// An instance method that is static is declared below, along with an array
 public static String[] getFoodTypes() {
 	String[] foodTypes = {"breakfast","lunch","dinner","dessert","snack"};
-	return foodTypes;
+	return foodTypes; // returning the informtion to main method
 }
 
-public static String[] getFoodsByType(String type) {
-	String[] foods = new String[3];
+public static String[] getFoodsByType(String type) { //another static method is being called, along with array 
+	String[] foods = new String[3]; //array for "foods" is set to 4
 
-	switch(type) {
-	case "breakfast":
+	switch(type) {   		//Switch statement begins 
+	case "breakfast":			
 		foods[0] = "pancakes";
 		foods[1] = "cereal";
 		foods[2] = "omelette";
 		break;
 	case "lunch":
 		foods[0] = "sandwich";
-		foods[1] = "salad";
-		foods[2] = "soup";
-		break;
+		foods[1] = "salad";			//These lines here are running to check which
+		foods[2] = "soup";			//statement is true, when it finds the statement
+		break;					//that is true it will stop running
 	case "dinner":
 		foods[0] = "curry";
 		foods[1] = "stir fry";
 		foods[2] = "burger";
-		break;
+		break;					
 	case "dessert":
 		foods[0] = "cake";
 		foods[1] = "ice cream";
@@ -46,7 +47,7 @@ public static String[] getFoodsByType(String type) {
 	default:
 		// add your own
 		break;
-	}
+	}						//Switch statements ends	
 
-	return foods;
+	return foods;				// methods is being returned to main method
 }
