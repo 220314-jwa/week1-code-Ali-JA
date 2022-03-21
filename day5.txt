@@ -1,23 +1,30 @@
-<html>
-	<head>
-		<title>Daily Code Review</title>
-	</head>
-	<body>
-		<h1>Cook your food!</h1>
-		<form action="http://localhost:8080/cook">
-			<label for="foodName">Food Name:</label>
-			<input id="foodName" name="foodName" type="text">
-			<br>
-			<button type="submit">Submit</button>
-		</form>
-	</body>
-</html>
+<html> // specify the document type
+	<head> //where the meta data, title, or any important information that is suppose
+		//go into the document
+		<title>Daily Code Review</title> //this will display in browsers tab
+	</head> //closing tag for the head element
+	<body>	//this is where your content will go
+		<h1>Cook your food!</h1> // heading that will display on browser
+						//has both opening tag and closing tag
+		<form action="http://localhost:8080/cook"> // a form tag is created,
+									//this is seperates the other forms or
+									//input information
+									//can also use the action attribute
+									//to fetch a http request
+			<label for="foodName">Food Name:</label> //This is labeling for your inputs
+			<input id="foodName" name="foodName" type="text"> //this will pop up in the browser
+											//as a text entry field
+			<br> //this is a break line, it gives a whitespace between elements on browser
+			<button type="submit">Submit</button> //a button is created with the context of submit
+									//letting user know to click submit button
+		</form> //closing tag for form
+	</body> //closing tag for body
+</html> //end of document
+public static void main(String[] args) {	//main method created 
+	Javalin app = Javalin.create();	//Javalin variable created and it is calling a javalin to create method
+	app.start();				//Javalin variable is calling a javling method to start
 
-public static void main(String[] args) {
-	Javalin app = Javalin.create();
-	app.start();
-
-	app.get("cook", ctx -> {
+	app.get("cook", ctx -> {		//javalin variable is getting the http request
 		String foodSent = ctx.formParam("foodName");
 		String cookedFood = "cooked " + foodSent;
 		ctx.result("Here's your food! <br>" + cookedFood);
